@@ -35,6 +35,7 @@ def send_mail(path):
     smtp.sendmail(msg, from_addr='bwftest126@126.com', to_addrs=['1415122567@qq.com'])
     #5-退出
     smtp.quit()
+    print("邮件已发送")
 
 if __name__ == '__main__':
     #2.要批量执行，首先要明确你要执行那些测试用例
@@ -55,6 +56,8 @@ if __name__ == '__main__':
     #HTMLTestRunner().run(suite)代替unittest.TextTestRunner().run(suite)
     #我们需要把生成的Html格式的测试报告保存到一个固定位置方便查看
     #在项目的根节点下，创建一个文件夹：reports
+
+
 
     #5.定义测试报告的保存目录
     base_path = os.path.dirname(__file__)
